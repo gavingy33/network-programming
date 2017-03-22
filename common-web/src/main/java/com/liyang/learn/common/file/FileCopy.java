@@ -31,8 +31,8 @@ public class FileCopy {
 	}
 
 	public static void main(String[] args) {
-		FileCopy.copyByStream("/Users/gaofeng/共享/source_1.txt", "/Users/gaofeng/共享/target_1.txt");
-		FileCopy.copyByChannel("/Users/gaofeng/共享/source_2.txt", "/Users/gaofeng/共享/target_2.txt");
+		FileCopy.copyByStream("/Users/gaofeng/share/source_1.txt", "/Users/gaofeng/share/target_1.txt");
+		FileCopy.copyByChannel("/Users/gaofeng/share/source_2.txt", "/Users/gaofeng/share/target_2.txt");
 	}
 
 }
