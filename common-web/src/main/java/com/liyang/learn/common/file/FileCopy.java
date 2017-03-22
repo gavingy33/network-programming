@@ -1,10 +1,13 @@
 package com.liyang.learn.common.file;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
 
 public class FileCopy {
 
@@ -26,6 +29,14 @@ public class FileCopy {
 				targetStream.write(buffer, 0, offset);
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void copy(String source, String target) {
+		try {
+			Files.copy(new File(source).toPath(), new File(target).toPath());
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
