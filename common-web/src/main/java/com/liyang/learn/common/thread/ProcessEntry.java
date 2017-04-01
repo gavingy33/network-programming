@@ -27,10 +27,10 @@ public class ProcessEntry extends Thread {
 	}
 
 	public static void main(String[] args) {
-		LoadFile loadFile = new LoadFile("/Users/gaofeng/share/source_1.txt", ProcessEntry.entries);
+		LoadFile loadFile = new LoadFile(args[0], entries);
 		for (int i = 0; i < 10; i++) {
-			Thread thread = new Thread(new ProcessEntry());
-			loadFile.regster(thread);
+			Thread thread = new ProcessEntry();
+			loadFile.register(thread);
 			thread.start();
 		}
 		loadFile.read();
@@ -49,7 +49,7 @@ class LoadFile {
 		this.entries = entries;
 	}
 
-	public void regster(Thread thread) {
+	public void register(Thread thread) {
 		if (threads == null) {
 			threads = new ArrayList<>();
 		}
