@@ -9,7 +9,7 @@ import com.liyang.learn.common.file.ReadClasspathFile;
 
 public class SocketClient {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnknownHostException {
 		try {
 			Socket socket = new Socket("127.0.0.1", 9090);
 			OutputStream outputStream = socket.getOutputStream();
@@ -21,8 +21,6 @@ public class SocketClient {
 
 			socket.shutdownOutput();
 			socket.close();
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
