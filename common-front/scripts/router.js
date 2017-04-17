@@ -56,6 +56,72 @@ require([ 'mmState' ], function(mmState) {
 				}
 			}
 		}
+	}).state('app.ms_skip', {
+		url : 'ms_skip',
+		views : {
+			"@" : {
+				templateProvider : function() {
+					return new Promise(function(rs, rj) {
+						requirejs([ 'text!/view/ms_skip/ms_skip.html' ], function($ctrl) {
+							rs($ctrl);
+							console.log("load '/view/ms_skip/ms_skip.html' successful !");
+						})
+					})
+				},
+				controllerProvider : function() {
+					return new Promise(function(rs, rj) {
+						requirejs([ '/view/ms_skip/ms_skip.js' ], function($ctrl) {
+							rs($ctrl);
+							console.log("load '/view/ms_skip/ms_skip.js' successful !");
+						})
+					})
+				}
+			}
+		}
+	}).state('app.ms_important', {
+		url : 'ms_important',
+		views : {
+			"@" : {
+				templateProvider : function() {
+					return new Promise(function(rs, rj) {
+						requirejs([ 'text!/view/ms_important/ms_important.html' ], function($ctrl) {
+							rs($ctrl);
+							console.log("load '/view/ms_important/ms_important.html' successful !");
+						})
+					})
+				},
+				controllerProvider : function() {
+					return new Promise(function(rs, rj) {
+						requirejs([ '/view/ms_important/ms_important.js' ], function($ctrl) {
+							rs($ctrl);
+							console.log("load '/view/ms_important/ms_important.js' successful !");
+						})
+					})
+				}
+			}
+		}
+	}).state('app.ms_attr', {
+		url : 'ms_attr',
+		views : {
+			"@" : {
+				templateProvider : function() {
+					return new Promise(function(rs, rj) {
+						requirejs([ 'text!/view/ms_attr/ms_attr.html' ], function($ctrl) {
+							rs($ctrl);
+							console.log("load '/view/ms_attr/ms_attr.html' successful !");
+						})
+					})
+				},
+				controllerProvider : function() {
+					return new Promise(function(rs, rj) {
+						requirejs([ '/view/ms_attr/ms_attr.js' ], function($ctrl) {
+							rs($ctrl);
+							console.log("load '/view/ms_attr/ms_attr.js' successful !");
+						})
+					})
+				}
+			}
+		}
 	});
 	avalon.router.error(function() {
 		avalon.router.navigate('root')

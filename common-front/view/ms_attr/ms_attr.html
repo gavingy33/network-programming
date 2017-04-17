@@ -1,0 +1,10 @@
+<div ms-controller="ms_attr">
+	 <span ms-attr="@obj">直接引用对象</span>
+    <img ms-attr="{src: @path}" />
+    <ul>
+        <li ms-for="el in @arr"><a ms-attr="{href:'http://www.ccc.xxx/ddd/'+ el.img}">下载</a></li>
+    </ul>
+    <span :attr="{width: @width, height: @height}">使用对象字面量</span><br/>
+    <span :attr="@array">直接引用数组</span><br/>
+    <span :attr="[@obj, @toggle && @active ]" :click="@toggle = !@toggle">选择性添加多余属性或重写已有属性</span>
+</div>
