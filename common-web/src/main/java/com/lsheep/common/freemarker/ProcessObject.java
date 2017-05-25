@@ -1,4 +1,4 @@
-package com.liyang.learn.common.freemarker;
+package com.lsheep.common.freemarker;
 
 import java.math.BigDecimal;
 import java.util.List;

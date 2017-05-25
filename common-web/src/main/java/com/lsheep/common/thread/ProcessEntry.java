@@ -1,4 +1,4 @@
-package com.liyang.learn.common.thread;
+package com.lsheep.common.thread;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,11 +1,11 @@
-package com.liyang.learn.common.socket;
+package com.lsheep.common.socket;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import com.liyang.learn.common.file.ReadClasspathFile;
+import com.lsheep.common.file.ReadClasspathFile;
 
 public class SocketClient {
 

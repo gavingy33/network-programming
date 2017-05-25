@@ -34,8 +34,13 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.26-incubating</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.3.8.RELEASE</version>
+		</dependency>
 	</dependencies>
 	<build>
-		<finalName>common</finalName>
+		<finalName>common-web</finalName>
 	</build>
 </project>

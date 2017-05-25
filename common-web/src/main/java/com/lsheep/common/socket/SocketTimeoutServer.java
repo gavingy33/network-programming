@@ -1,4 +1,4 @@
-package com.liyang.learn.common.socket;
+package com.lsheep.common.socket;
 
 import java.io.IOException;
 import java.io.InputStream;
