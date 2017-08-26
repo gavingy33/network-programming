@@ -8,7 +8,7 @@ import org.springframework.util.StringUtils;
 
 public class ParamsCheck {
 
-	private List<String> messages = new ArrayList<>();
+	private final List<String> messages = new ArrayList<>();
 
 	public ParamsCheck() {
 	}
