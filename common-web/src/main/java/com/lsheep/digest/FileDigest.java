@@ -31,7 +31,7 @@ public class FileDigest {
 
 class DigestThread extends Thread {
 
-	private List<DigetsCallback> callback = new ArrayList<>();
+	private List<DigetsCallback> callbackList = new ArrayList<>();
 	private final String file;
 
 	public DigestThread(String file) {
@@ -39,7 +39,7 @@ class DigestThread extends Thread {
 	}
 
 	public void registerCallback(DigetsCallback digetsCallback) {
-		callback.add(digetsCallback);
+		callbackList.add(digetsCallback);
 	}
 
 	@Override
@@ -50,8 +50,8 @@ class DigestThread extends Thread {
 			digestInputStream = new DigestInputStream(new BufferedInputStream(new FileInputStream(file)), digest);
 			while (digestInputStream.read() != -1) {
 			}
-			for (DigetsCallback digetsCallback : callback) {
-				digetsCallback.callback(digest.digest());
+			for (DigetsCallback callback : callbackList) {
+				callback.callback(digest.digest());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
