@@ -36,10 +36,10 @@ public class MemoryCache extends ResponseCache {
 
 		while (true) {
 			try {
-				URL url = new URL("https://lsheep.com/index.html");
+				URL url = new URL("http://lsheep.com/index.html");
 				URLConnection connection = url.openConnection();
 				// connection.getHeaderFields();
-				connection.setUseCaches(true);
+				connection.setUseCaches(false);
 
 				BufferedReader bufferedReader = new BufferedReader(
 						new InputStreamReader(connection.getInputStream(), Charset.forName("UTF-8")));
