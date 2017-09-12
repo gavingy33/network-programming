@@ -5,11 +5,14 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 
+import org.junit.Test;
+
 import com.lsheep.StreamUtil;
 
 public class ClientSocket {
 
-	public static void main(String[] args) {
+	@Test
+	public void test01() {
 		try {
 			Socket socket = new Socket();
 			InetAddress inetAddress = InetAddress.getByName("time.nist.gov");
