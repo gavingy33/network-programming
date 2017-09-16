@@ -3,7 +3,6 @@ package com.lsheep.webcache;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.CacheRequest;
 import java.net.CacheResponse;
 import java.util.Arrays;
 import java.util.Collections;
